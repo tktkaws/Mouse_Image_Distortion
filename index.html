@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Image Distortion - Static Three.js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js"
+        }
+      }
+    </script>
+    <style>
+      @font-face {
+        font-family: "PPGatwick";
+        src: url("../public/PPGatwick-Regular.otf") format("opentype");
+        font-display: swap;
+      }
+
+      html {
+        background: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: #ffffff;
+        font-family: "PPGatwick", Arial, Helvetica, sans-serif;
+      }
+
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="h-[50vh]"></div>
+
+      <section class="relative z-10 h-screen w-full mix-blend-difference text-white">
+        <ul id="project-list" class="border-b border-white/80"></ul>
+      </section>
+
+      <div id="webgl-stage" class="pointer-events-none fixed inset-0 h-screen w-full"></div>
+      <template id="project-item-template">
+        <li class="border-t border-white/80 p-5 text-[4vw]">
+          <p></p>
+        </li>
+      </template>
+
+      <div class="h-[50vh]"></div>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
