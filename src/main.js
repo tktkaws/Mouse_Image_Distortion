@@ -245,7 +245,7 @@ function createPlaceholderTexture(title, index) {
   context.fillText(title, canvas.width / 2, canvas.height / 2 - 18);
 
   context.font = "400 30px Arial, sans-serif";
-  context.fillText("Place image in public/images", canvas.width / 2, canvas.height / 2 + 52);
+  context.fillText("Place image in ./public/images", canvas.width / 2, canvas.height / 2 + 52);
 
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;

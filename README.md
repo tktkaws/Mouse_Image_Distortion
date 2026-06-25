@@ -53,14 +53,14 @@ static-reproduction/
 export const projects = [
   {
     title: "Richard Gaston",
-    src: "../public/images/5.jpg",
+    src: "./public/images/5.jpg",
   },
 ];
 ```
 
 プロジェクトを増やしたい場合は、この配列にオブジェクトを追加します。
 
-画像は `../public/images/1.jpg` から `7.jpg` を参照しています。画像ファイルが存在しない場合でも、デモが壊れないように `main.js` 側でプレースホルダー画像を生成します。
+画像は `./public/images/1.jpg` から `7.jpg` を参照しています。これは `static-reproduction/public/images` の中を見に行く指定です。画像ファイルが存在しない場合でも、デモが壊れないように `main.js` 側でプレースホルダー画像を生成します。
 
 ### `src/shaders.js`
 
@@ -323,7 +323,7 @@ plane.scale.set(scale.x, scale.y, 1);
 
 ## プレースホルダー画像
 
-リポジトリには `public/images/1.jpg` から `7.jpg` が入っていない場合があります。
+`static-reproduction/public/images/1.jpg` から `7.jpg` が入っていない場合があります。
 
 画像読み込みに失敗した場合は、`createPlaceholderTexture` で Canvas から仮画像を作ります。
 
